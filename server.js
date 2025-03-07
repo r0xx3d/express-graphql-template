@@ -64,7 +64,6 @@ const AuthorType = new GraphQLObjectType ({
         })
 })
 
-
 const RootQueryType = new GraphQLObjectType({
 	name: 'Query',
 	description: 'Root Query',
@@ -132,23 +131,14 @@ const RootMutationType = new GraphQLObjectType ({
 			return author
 			}
 			}		
-			
 		})
 
-
-
-
-
-
-
 })
-
 
 const schema = new GraphQLSchema({
 	query: RootQueryType,
 	mutation: RootMutationType
 })
-
 
 app.use('/graphql', graphqlHTTP({
 	schema: schema,
